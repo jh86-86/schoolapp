@@ -1,3 +1,5 @@
+<!--A simple calculator component with click functionality on divs for basic operations -->
+
 <template>
   <div class="calculator">
     <!--top of calculator-->
@@ -66,6 +68,9 @@ export default {
         this.previous= this.current; //set the previous or first number or a for the mathematical operations
         this.operatorClicked=true; //once click operator is set
       },
+
+      /*I will refractor this later to one function which takes a parameter of an operand and
+      passes through a swtich statement logically so that there is just one functin */
       add(){
         this.operator = (a,b)=> a+b;
         this.setPrevious();
