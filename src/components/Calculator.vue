@@ -109,6 +109,8 @@ export default {
   grid-template-columns: repeat(4, 1fr); /*four equal rows*/
   grid-auto-rows: minmax(50px, auto); /* rows will go on infinitely at 50px when added in calc div*/
   border:1px solid black ;
+  margin-top:100px;
+  text-align: center;
 }
 
 .display{

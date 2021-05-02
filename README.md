@@ -34,3 +34,7 @@ Another stretch goal depending on how my other projects go will be to make a ser
 If all that goes well, I would like to make it responsive for phones.
 
 A final stretch goal will be to dockerise it and deploy it on Azure.
+
+
+Dependencies:
+vue router
