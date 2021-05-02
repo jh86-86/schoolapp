@@ -5,6 +5,7 @@
     <router-link class="link" to="/users/10">Users</router-link> <!--using router link rerenders pge,keeps it single page application-->
     <router-link class="link" to="/drawingpage">Drawing</router-link> <!--using router link rerenders pge,keeps it single page application-->
     <router-link class="link" to="/calculator">Calculator</router-link> <!--using router link rerenders pge,keeps it single page application-->
+    <router-link class="link" to="/notes">Notes</router-link> <!--using router link rerenders pge,keeps it single page application-->
   </div>
   <router-view></router-view>    <!--router view is reserved components-->
   </div> 
@@ -51,12 +52,11 @@ export default {
     list-style-type: none;
     padding: 10px;
     padding-left: 30px;
-
 }
 
 
 
-link:hover{
+.link:hover{
     color:slategrey
 }
 </style>
