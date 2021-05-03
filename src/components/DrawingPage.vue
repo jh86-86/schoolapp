@@ -1,6 +1,6 @@
 <template>
 <div id="container">
-<div>
+<div id="canvas">
   <p>drawing place </p>
   <canvas id="c"> </canvas>
 </div>
@@ -8,6 +8,7 @@
     <button @click="drawRect">Add Rect</button>
     <button @click="subWidth">-</button>
     <button @click="addWidth">+</button>
+    
   </div>
 </div>
 </template>
@@ -20,11 +21,15 @@ export default {
     rectWidth: 200
       }
   },
-  mounted() {
+  mounted() {  
   var c = document.getElementById("c");
   var ctx = c.getContext("2d");    
   this.vueCanvas = ctx;
   this.painting=false;
+
+  c.addEventListener("mousedown",this.startPosition);
+  c.addEventListener("mouseup",this.finishedPosition);
+  c.addEventListener("mousemove",this.draw);
 },
 methods:{
  drawRect() {
@@ -49,7 +54,20 @@ methods:{
     },
     finishedPosition(){
       this.painting=false;
+    },
+    draw(e){
+      if(!this.painting) return;
+      this.vueCanvas.lineWidth=10;
+      this.lineCap="round";
+      this.vueCanvas.strokeStyle="red";
+
+      this.vueCanvas.lineTo(e.clientX,e.clientY);
+      this.vueCanvas.stroke();
+      this.vueCanvas.beginPath();
+      this.vueCanvas.moveTo(e.clientX,e.clientY);
+      console.log(e.clientX)
     }
+    
 }
 }
 </script>
@@ -63,9 +81,16 @@ methods:{
 }
 
 #c {
-  height: 200px;
-  width: 400px;
+  height: 700px;
+  width: 700px;
   border: 1px solid gray;
+   
+}
+
+#canvas{
+  display: flex;
+  justify-content: center;
+  margin-top:50px;
 }
 
 </style>
