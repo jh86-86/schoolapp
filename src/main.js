@@ -6,6 +6,7 @@ import Home from './components/Home.vue';
 import DrawingPage from './components/DrawingPage.vue';
 import Calculator from './components/Calculator.vue';
 import NotesPage from './components/Notes.vue';
+import Classroom from './components/Classroom.vue';
 
 Vue.use(VueRouter); //routing is now enabled as a plugin and will work
 
@@ -14,6 +15,7 @@ const  routes = [   //this difines the rotues
   {path: '/drawingPage', component:DrawingPage},   //makes the routes
   {path: '/calculator', component:Calculator},   //makes the routes
   {path: '/notes', component:NotesPage},   //makes the routes
+  {path: '/classroom', component:Classroom},   //makes the routes
   {path: '/', component: Home},  //home is always the blank route
 ];
 
