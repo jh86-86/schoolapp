@@ -7,10 +7,12 @@ import DrawingPage from './components/DrawingPage.vue';
 import Calculator from './components/Calculator.vue';
 import NotesPage from './components/Notes.vue';
 import Classroom from './components/Classroom.vue';
+import Chatroom from './components/Chatroom.vue';
 
 Vue.use(VueRouter); //routing is now enabled as a plugin and will work
 
 const  routes = [   //this difines the rotues
+  {path: '/chatroom', component:Chatroom},   //makes the routes
   {path: '/users/teamId', component:Users},   //makes the routes
   {path: '/drawingPage', component:DrawingPage},   //makes the routes
   {path: '/calculator', component:Calculator},   //makes the routes

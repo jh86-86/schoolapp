@@ -88,8 +88,8 @@ methods:{
 }
 
 #canvas{
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   margin-top:50px;
 }
 
